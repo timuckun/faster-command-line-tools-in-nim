@@ -4,4 +4,13 @@ D/*
 Nim/*
 !Nim/*.nim
 
+Crystal/*
+!Crystal/*.cr
+
 ngrams.tsv
+
+.DS_Store
+
+tmp
+
+.idea
