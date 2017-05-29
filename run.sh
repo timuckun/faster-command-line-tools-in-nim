@@ -21,7 +21,7 @@ time ./Crystal/csv_test ./ngrams.tsv 1 2
 echo "\nAwk..."
 
 time cat ./ngrams.tsv \
-    | awk -v key="1" -v value="2" -f ./Awk/csv_test.awk \
+    | awk -v key="2" -v value="3" -f ./Awk/csv_test.awk \
     | sort -n -k 2 -r \
     | sed 1q
 
