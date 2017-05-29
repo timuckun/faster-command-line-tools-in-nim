@@ -1,6 +1,4 @@
 #!/usr/bin/env crystal
-require "benchmark"
-
 if ARGV.size != 3
   puts "Must give three arguments \nexample: #{PROGRAM_NAME} filename keyfield valuefield"
   exit
@@ -21,18 +19,4 @@ File.open(file_name).each_line do |line|
 end
 
 max_key, max_value = h.max_by { |k, v| v }
-puts print "max_key:'#{max_key}', sum: #{max_value}"
-
-# max_field_index = max(args.key_field_index, args.value_field_index)
-#   sum_by_key = collections.Counter()
-#
-#   for line in args.file:
-#       fields = line.rstrip('\n').split(delim)
-#       if max_field_index < len(fields):
-#           sum_by_key[fields[args.key_field_index]] += int(fields[args.value_field_index])
-#
-#   max_entry = sum_by_key.most_common(1);
-#   if len(max_entry) == 0:
-#       print 'No entries'
-#   else:
-#       print 'max_key:', max_entry[0][0], 'sum:', max_entry[0][1]
+puts "max_key:'#{max_key}', sum: #{max_value}"
